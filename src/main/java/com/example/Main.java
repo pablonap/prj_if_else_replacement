@@ -8,9 +8,10 @@ public class Main {
 
         System.out.println("Replacing IF-ELSE IF way: ");
 
-        System.out.println("Cart 6 -- " + RuleMatrix.getRule(cart6).apply(cart6));
-        System.out.println("Cart 7 -- " + RuleMatrix.getRule(cart7).apply(cart7));
-        System.out.println("Cart 7 -- " + RuleMatrix.getRule(cart17).apply(cart17));
+        Rules<Cart> rules = new Rules<>();
+        System.out.println("Cart 6 -- " + rules.getRule(RuleMatrix.getRules(), cart6).apply(cart6));
+        System.out.println("Cart 7 -- " + rules.getRule(RuleMatrix.getRules(), cart7).apply(cart6));
+        System.out.println("Cart 17 -- " + rules.getRule(RuleMatrix.getRules(), cart17).apply(cart6));
 
         System.out.println("Old way: ");
 

@@ -16,14 +16,4 @@ public class RuleMatrix {
     public static Map<Predicate, Function> getRules() {
         return ruleMatrix;
     }
-
-    public static Function getRule(Cart cart) {
-        return ruleMatrix
-                .entrySet()
-                .stream()
-                .filter(entry -> entry.getKey().test(cart))
-                .map(entry -> entry.getValue())
-                .findFirst()
-                .orElse(CartFunctions.DEFAULT);
-    }
 }
